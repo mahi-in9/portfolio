@@ -18,14 +18,14 @@ export default function Hero() {
           </p>
           <div className="mt-6 flex gap-4">
             <a
-              href="/Mahendra-Kumar-Resume.pdf"
+              href="../public/Mahendra-Kumar-Sahu.resume.pdf"
               download
               className="px-5 py-2 bg-blue-600 text-white rounded"
             >
               Download Resume
             </a>
             <a
-              href="https://drive.google.com/your-drive-link"
+              href="https://drive.google.com/file/d/16xNbpob2p_7iziGAk7E8m3PwdW9x1f9c/view?usp=sharing"
               target="_blank"
               rel="noreferrer"
               className="px-5 py-2 border rounded"
