@@ -18,7 +18,7 @@ export default function Hero() {
           </p>
           <div className="mt-6 flex gap-4">
             <a
-              href="../public/Mahendra-Kumar-Sahu.resume.pdf"
+              href="../public/zMahendra-Kumar-Sahu.resume.pdf"
               download
               className="px-5 py-2 bg-blue-600 text-white rounded"
             >
@@ -42,7 +42,7 @@ export default function Hero() {
           transition={{ delay: 0.2 }}
         >
           <img
-            src="../public/profile.jpg"
+            src="/profile.jpg"
             alt="Mahendra"
             className="w-56 h-56 object-cover rounded-full border-4 border-blue-100"
           />
