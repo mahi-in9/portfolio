@@ -28,7 +28,7 @@ function RotatingCubes() {
           roughness={0.1}
           emissive={`hsl(${(i / cubeCount) * 360}, 100%, 50%)`}
         />
-      </mesh>
+      </mesh>,
     );
   }
 

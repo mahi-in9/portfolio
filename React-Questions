@@ -1,0 +1,221 @@
+🟢 Beginner Level (Core React Basics)
+🧩 1. React Fundamentals
+
+What is React?
+
+What are the main features of React?
+
+What is JSX?
+
+What is the difference between Element and Component?
+
+What are functional and class components?
+
+What is the virtual DOM, and how does it work?
+
+Why is React considered declarative?
+
+What are props in React?
+
+What is state in React?
+
+Difference between props and state?
+
+How does React handle data flow (unidirectional data flow)?
+
+What is key in React and why is it important?
+
+What are controlled and uncontrolled components?
+
+What are synthetic events in React?
+
+🟠 Intermediate Level (Hooks, Lifecycle, Rendering)
+⚙️ 2. React Hooks
+
+What are React hooks?
+
+Why were hooks introduced?
+
+Difference between useState and useReducer?
+
+What is useEffect, and when does it run?
+
+How can you stop an infinite loop in useEffect?
+
+What is useRef and what are its use cases?
+
+What is useMemo and when should you use it?
+
+What is useCallback, and how does it differ from useMemo?
+
+What is useContext and when to use it?
+
+What is a custom hook and how do you create one?
+
+🔁 3. Component Lifecycle
+
+Explain React component lifecycle (class components).
+
+Which lifecycle methods are used for API calls?
+
+What are componentDidMount, componentDidUpdate, and componentWillUnmount?
+
+How do you simulate lifecycle methods in functional components using hooks?
+
+⚡ 4. Rendering & Performance
+
+What causes re-renders in React?
+
+How to optimize performance in React?
+
+What is React.memo()?
+
+What is reconciliation in React?
+
+How does React diffing algorithm work?
+
+What is lazy loading?
+
+What is code splitting?
+
+🔵 Advanced Level (Routing, Redux, Architecture, Testing)
+🌐 5. Routing
+
+What is React Router?
+
+Difference between <Link> and <NavLink>?
+
+What is useNavigate (or useHistory in older versions)?
+
+How do you pass parameters in React Router?
+
+How do you handle redirects?
+
+🔄 6. State Management
+
+Why do we need state management libraries?
+
+What is Redux?
+
+Explain the Flux architecture.
+
+What are the key principles of Redux?
+
+What are actions, reducers, and the store?
+
+What is middleware in Redux?
+
+Difference between Redux and Context API?
+
+What is Redux Toolkit and why is it preferred?
+
+🧠 7. React Context API
+
+What is Context API?
+
+When should you use Context instead of Redux?
+
+How to create and consume context?
+
+🧩 8. Higher-Order Components (HOC)
+
+What is a higher-order component?
+
+Give an example use case of HOC.
+
+Difference between HOC and Render Props?
+
+🧱 9. Forms and Validation
+
+How do you handle forms in React?
+
+How to manage form state?
+
+What libraries can be used for form validation? (Formik, react-hook-form)
+
+🔍 10. Testing
+
+How do you test React components?
+
+What is Jest?
+
+What is React Testing Library?
+
+How do you simulate user interactions in tests?
+
+🔴 Expert Level (Internals, Optimization, Advanced Hooks, Patterns)
+⚛️ 11. React Internals
+
+How does React update the DOM?
+
+What is Fiber architecture in React?
+
+What is concurrent rendering?
+
+What is React 18’s automatic batching?
+
+How does React handle async rendering?
+
+🚀 12. Performance Optimization
+
+How to prevent unnecessary re-renders?
+
+What are Pure Components?
+
+What is the difference between React.memo and useMemo?
+
+What is React Profiler?
+
+What is server-side rendering (SSR)?
+
+What is hydration in React?
+
+🧩 13. Design Patterns
+
+What are render props?
+
+What is compound component pattern?
+
+What is controlled vs uncontrolled pattern?
+
+What is the provider pattern?
+
+⚙️ 14. Advanced Hooks & APIs
+
+What is useImperativeHandle?
+
+What is forwardRef and when to use it?
+
+What is useLayoutEffect and how does it differ from useEffect?
+
+What is useTransition and useDeferredValue (React 18)?
+
+What are Suspense and Error Boundaries?
+
+🧰 15. Miscellaneous / Real-world
+
+How to fetch data in React (Axios, Fetch, custom hook)?
+
+What is debouncing and throttling in React?
+
+How do you handle error boundaries?
+
+How to handle authentication (JWT, context)?
+
+How do you persist state between reloads?
+
+What is the difference between SPA and MPA?
+
+How do you handle SEO in React apps?
+
+🏆 Bonus: Behavioral + Scenario Questions
+
+How would you optimize a React app that’s rendering slowly?
+
+How do you handle global state across large applications?
+
+How do you structure a React project for scalability?
+
+What’s the difference between server components and client components (React 18+)?
+
+How would you migrate a class component to functional with hooks?
