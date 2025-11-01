@@ -1,0 +1,259 @@
+Core JavaScript (Beginner to Intermediate)
+
+These check your foundation — syntax, basics, and core behavior.
+
+✅ Basics & Syntax
+
+What are the different data types in JavaScript?
+
+Difference between var, let, and const.
+
+What is hoisting? Give examples.
+
+What are template literals?
+
+Explain the difference between == and ===.
+
+What are truthy and falsy values in JS?
+
+What is the difference between undefined, null, and NaN?
+
+What is the typeof operator used for?
+
+What is the output of typeof null? Why?
+
+What are primitive and non-primitive data types?
+
+✅ Functions & Scope
+
+What are function declarations vs function expressions?
+
+What is arrow function syntax, and how does it differ from normal functions?
+
+Explain scope and lexical scope.
+
+What is the difference between local and global scope?
+
+What is a closure? Give a practical example.
+
+What is the purpose of IIFE (Immediately Invoked Function Expression)?
+
+What is callback function?
+
+What is the use of rest and spread operators (...)?
+
+How does this keyword work in different contexts (function, arrow, class, event handler)?
+
+What is currying in JavaScript?
+
+✅ Arrays, Objects & Destructuring
+
+What are array methods: map(), filter(), reduce(), forEach() — differences?
+
+Explain deep copy vs shallow copy in JavaScript.
+
+How do you clone an object in JavaScript?
+
+What is object destructuring and array destructuring?
+
+What are computed property names?
+
+How do you merge two arrays or objects?
+
+How does Object.freeze() differ from Object.seal()?
+
+What is optional chaining (?.) and nullish coalescing (??)?
+
+⚙️ Intermediate to Advanced JavaScript
+
+These questions focus on execution, async, prototypes, and browser internals.
+
+✅ Execution & Event Loop
+
+Explain the JavaScript Execution Context.
+
+What are Creation Phase and Execution Phase?
+
+What is the Call Stack?
+
+What is the Event Loop, and how does it work?
+
+Explain Microtasks vs Macrotasks (Promises vs setTimeout).
+
+What is the order of execution in async JS code?
+
+What is the difference between process.nextTick() and Promise.then()?
+
+✅ Prototype & OOP in JS
+
+What is a prototype chain?
+
+What is prototypal inheritance?
+
+How do you create classes in JS (ES5 vs ES6)?
+
+What are getters and setters in a class?
+
+Difference between static and instance methods?
+
+What does super() do in class constructors?
+
+Can you inherit from multiple classes in JS?
+
+✅ Asynchronous JavaScript
+
+Difference between synchronous and asynchronous programming.
+
+What are Promises?
+
+What are async/await keywords, and how do they work internally?
+
+What is Promise.all, Promise.allSettled, Promise.any, and Promise.race?
+
+How do you handle errors in async/await?
+
+What is the difference between callback hell and promise chaining?
+
+What is the fetch() API, and how does it differ from XMLHttpRequest?
+
+How can you cancel a fetch request?
+
+✅ DOM & Browser APIs
+
+What is the DOM?
+
+Difference between NodeList and HTMLCollection?
+
+What are event bubbling and capturing?
+
+How do you prevent event propagation?
+
+What is debouncing and throttling?
+
+What is the difference between innerHTML, innerText, and textContent?
+
+How do you dynamically create and append elements in the DOM?
+
+What is localStorage, sessionStorage, and cookies?
+
+Difference between DOMContentLoaded and load events?
+
+What is the Shadow DOM?
+
+🚀 Expert-Level JavaScript
+
+These test deep internals, optimization, and architecture thinking.
+
+✅ Performance & Internals
+
+How does JavaScript garbage collection work?
+
+What are memory leaks, and how to prevent them?
+
+How does V8 engine optimize JavaScript code?
+
+Explain inline caching.
+
+What is tail call optimization?
+
+How to optimize loops and DOM reflows in large apps?
+
+✅ Advanced Topics
+
+What is event delegation, and why is it efficient?
+
+Explain repaint and reflow in browsers.
+
+What is functional programming in JavaScript?
+
+Difference between immutability and mutability in data structures.
+
+What is memoization, and how would you implement it?
+
+How does JavaScript handle concurrency?
+
+What is Web Worker, and how does it help in performance?
+
+What is Service Worker and its role in Progressive Web Apps (PWAs)?
+
+How does module system (ES Modules, CommonJS) work internally?
+
+Difference between import/export vs require/module.exports.
+
+What is tree shaking, and how does it reduce bundle size?
+
+✅ Security & Network
+
+What is CORS (Cross-Origin Resource Sharing)?
+
+What is same-origin policy?
+
+How do you handle CORS errors in the browser?
+
+What are CSRF and XSS attacks, and how do you prevent them?
+
+What is Content Security Policy (CSP)?
+
+What are HTTP-only cookies and Secure flags?
+
+✅ Real-World + Code Questions
+
+What will be the output?
+
+console.log([] + []); 
+console.log([] + {}); 
+console.log({} + []);
+
+
+What is the output?
+
+console.log(0.1 + 0.2 === 0.3);
+
+
+What will this print?
+
+let a = {x: 1};
+let b = a;
+b.x = 2;
+console.log(a.x);
+
+
+What happens here?
+
+const a = [1, 2, 3];
+const b = a;
+b.push(4);
+console.log(a);
+
+
+How would you deep clone a nested object safely (no shallow copy)?
+
+Implement a custom debounce() function.
+
+Implement a custom throttle() function.
+
+Implement a custom Promise.all() polyfill.
+
+Implement your own bind(), call(), and apply().
+
+How would you make a function once — callable only one time?
+
+How would you flatten a nested array without .flat()?
+
+How would you implement memoization manually?
+
+How would you implement a LRU cache in JS?
+
+What is the difference between deep equality (==) and reference equality (===) for objects?
+
+How does event loop behave with setTimeout, Promise, and async/await in one code block?
+
+What is the output order of:
+
+console.log('A');
+setTimeout(() => console.log('B'));
+Promise.resolve().then(() => console.log('C'));
+console.log('D');
+
+
+How would you polyfill Array.prototype.map?
