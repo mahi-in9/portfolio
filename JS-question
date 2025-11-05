@@ -4,65 +4,120 @@ These check your foundation — syntax, basics, and core behavior.
 
 ✅ Basics & Syntax
 
-What are the different data types in JavaScript?
+~ What are the different data types in JavaScript?
 
-Difference between var, let, and const.
+<!-- In Js there are two types of data types
+    1) Premitive data types: premitive are imuttable and are stored by value
+        7 types of premitive data types: string, bigInt, number, boolean, null, undefined, sybmbol
+    2) Non-premitive data types: non-premitive are mutable and are stored by reference
+     ex: Object, array and function
+     -->
 
-What is hoisting? Give examples.
+~ Difference between var, let, and const.
 
-What are template literals?
+<!-- we can differenciate var let and const by many types:
+1) declaration: var can be re-declared and updated in the same scope.
+& let and const cannot be re-declared in the same scope.
 
-Explain the difference between == and ===.
+2) Initialization: var and let can be declare without assigning an initial value,
+const must be initialize at the time of declaration.
 
-What are truthy and falsy values in JS?
+3) scope: var is functional scope,
+let and const are block scope;
 
-What is the difference between undefined, null, and NaN?
+4) hoisting: all three ae hosited but they behave differently
+var is hoisted with and initialize with undefined,
+let and const are hoisted but remain in the TDZ. until their declaration line
+ -->
 
-What is the typeof operator used for?
+~ What is hoisting? Give examples.
 
-What is the output of typeof null? Why?
+<!-- Hoisting is a javascript mechanism where all the function and variable declaration are moved to the top of their scope during the compilation phase, before the code is executed.
+Variables declared with var are hoisted and initialized as undefined, while let and const are hoisted but remain in the Temporal Dead Zone.
+Function declarations are fully hoisted, allowing them to be called before definition
+ -->
 
-What are primitive and non-primitive data types?
+~ What are template literals?
+
+<!-- Template literals, introduced in ES6, provide a cleaner and more powerful way to handle strings using backticks. They support string interpolation (${}), multi-line strings, and expression embedding, replacing complex string concatenation and improving readability.
+ -->
+
+~ Explain the difference between == and ===.
+
+<!--
+The == operator checks equality after performing type coercion, meaning it converts operands to the same type before comparison.
+The === operator, known as strict equality, checks both type and value, making it more predictable and recommended for most comparisons in modern JavaScript.
+ -->
+
+~ What are truthy and falsy values in JS?
+
+<!--These are the only values considered falsy:
+false
+0
+-0
+"" (empty string)
+null
+undefined
+NaN
+
+Any value not listed above is truthy, including:
+
+Non-empty strings → "Mahi"
+
+Non-zero numbers → 42, -7
+
+Objects and arrays → {}, []
+
+Functions → function() {}
+ -->
+
+~ What is the difference between undefined, null, and NaN?
+
+~ What is the typeof operator used for?
+
+~ What is the output of typeof null? Why?
+
+~ What are primitive and non-primitive data types?
 
 ✅ Functions & Scope
 
-What are function declarations vs function expressions?
+ <!-- What are function declarations vs function expressions? -->
 
-What is arrow function syntax, and how does it differ from normal functions?
+ <!-- What is arrow function syntax, and how does it differ from normal functions? -->
 
-Explain scope and lexical scope.
+<!-- Explain scope and lexical scope. -->
 
-What is the difference between local and global scope?
+<!-- What is the difference between local and global scope? -->
 
-What is a closure? Give a practical example.
+<!-- What is a closure? Give a practical example. -->
 
-What is the purpose of IIFE (Immediately Invoked Function Expression)?
+<!-- What is the purpose of IIFE (Immediately Invoked Function Expression)? -->
 
-What is callback function?
+<!-- What is callback function? -->
 
-What is the use of rest and spread operators (...)?
+<!-- What is the use of rest and spread operators (...)? -->
 
-How does this keyword work in different contexts (function, arrow, class, event handler)?
+<!-- How does this keyword work in different contexts (function, arrow, class, event handler)? -->
 
-What is currying in JavaScript?
+<!-- What is currying in JavaScript? -->
 
 ✅ Arrays, Objects & Destructuring
 
-What are array methods: map(), filter(), reduce(), forEach() — differences?
+<!-- What are array methods: map(), filter(), reduce(), forEach() — differences? -->
 
-Explain deep copy vs shallow copy in JavaScript.
+<!-- Explain deep copy vs shallow copy in JavaScript. -->
 
-How do you clone an object in JavaScript?
+<!-- How do you clone an object in JavaScript? -->
 
-What is object destructuring and array destructuring?
+<!-- What is object destructuring and array destructuring? -->
 
-What are computed property names?
+<!-- What are computed property names? -->
 
-How do you merge two arrays or objects?
+<!-- How do you merge two arrays or objects? -->
 
-How does Object.freeze() differ from Object.seal()?
+<!-- How does Object.freeze() differ from Object.seal()? -->
 
-What is optional chaining (?.) and nullish coalescing (??)?
+<!-- What is optional chaining (?.) and nullish coalescing (??)? -->
 
 ⚙️ Intermediate to Advanced JavaScript
 
@@ -70,75 +125,114 @@ These questions focus on execution, async, prototypes, and browser internals.
 
 ✅ Execution & Event Loop
 
-Explain the JavaScript Execution Context.
+<!-- Explain the JavaScript Execution Context. -->
 
-What are Creation Phase and Execution Phase?
+<!-- What are Creation Phase and Execution Phase? -->
 
-What is the Call Stack?
+<!-- What is the Call Stack? -->
 
-What is the Event Loop, and how does it work?
+<!-- What is the Event Loop, and how does it work? -->
 
-Explain Microtasks vs Macrotasks (Promises vs setTimeout).
+<!-- Explain Microtasks vs Macrotasks (Promises vs setTimeout). -->
 
-What is the order of execution in async JS code?
+<!-- What is the order of execution in async JS code? -->
 
-What is the difference between process.nextTick() and Promise.then()?
+<!-- What is the difference between process.nextTick() and Promise.then()? -->
 
 ✅ Prototype & OOP in JS
 
-What is a prototype chain?
+<!-- What is a prototype chain? -->
 
-What is prototypal inheritance?
+<!-- What is prototypal inheritance? -->
 
-How do you create classes in JS (ES5 vs ES6)?
+<!-- How do you create classes in JS (ES5 vs ES6)? -->
 
-What are getters and setters in a class?
+<!-- What are getters and setters in a class? -->
 
-Difference between static and instance methods?
+<!-- Difference between static and instance methods? -->
 
-What does super() do in class constructors?
+<!-- What does super() do in class constructors? -->
 
-Can you inherit from multiple classes in JS?
+<!-- Can you inherit from multiple classes in JS? -->
 
 ✅ Asynchronous JavaScript
 
-Difference between synchronous and asynchronous programming.
+<!-- Difference between synchronous and asynchronous programming. -->
 
-What are Promises?
+<!-- What are Promises? -->
 
-What are async/await keywords, and how do they work internally?
+<!-- What are async/await keywords, and how do they work internally? -->
 
-What is Promise.all, Promise.allSettled, Promise.any, and Promise.race?
+<!-- What is Promise.all, Promise.allSettled, Promise.any, and Promise.race? -->
 
-How do you handle errors in async/await?
+<!-- How do you handle errors in async/await? -->
 
-What is the difference between callback hell and promise chaining?
+<!-- What is the difference between callback hell and promise chaining? -->
 
-What is the fetch() API, and how does it differ from XMLHttpRequest?
+<!-- What is the fetch() API, and how does it differ from XMLHttpRequest? -->
 
-How can you cancel a fetch request?
+<!-- How can you cancel a fetch request? -->
 
 ✅ DOM & Browser APIs
 
-What is the DOM?
+<!-- What is the DOM? -->
 
-Difference between NodeList and HTMLCollection?
+<!-- Difference between NodeList and HTMLCollection? -->
 
-What are event bubbling and capturing?
+<!-- What are event bubbling and capturing? -->
 
-How do you prevent event propagation?
+<!-- How do you prevent event propagation? -->
 
 What is debouncing and throttling?
+<!-- 
+Debouncing are throttling both are used to optimatization of an app but they both worked differnetly
+we use debouncing to get result after the certain time period when action are being stopped.
+and on other hand we use throttling 
+ -->
 
 What is the difference between innerHTML, innerText, and textContent?
 
+<!--
+innerHTML, innerText, and textContent are used to get or set the content of a DOM element, but they work differently:
+
+innerHTML returns or sets the HTML markup inside an element. It parses HTML tags, so it can add or remove elements dynamically.
+Example: div.innerHTML = "<b>Hello</b>" renders bold text.
+
+innerText returns only the visible text of an element as displayed on the page, respecting CSS styles like display: none or visibility: hidden.
+Example: It ignores hidden elements.
+
+textContent returns the raw text of an element and its children, ignoring any HTML tags and CSS styles. It’s faster and safer for inserting plain text because it doesn’t parse HTML.
+ -->
+
 How do you dynamically create and append elements in the DOM?
+
+<!--We can dynamically create elements in the DOM using document.createElement() and then insert them using methods like appendChild() or append().
+Before appending, we can modify the element’s content, attributes, and styles.
+appendChild() adds a single node, while append() can add multiple nodes
+ -->
 
 What is localStorage, sessionStorage, and cookies?
 
+<!--
+localStorage and sessionStorage are part of the Web Storage API used for storing key–value pairs in the browser, while cookies are used mainly for server–client communication.
+localStorage persists even after the browser closes, sessionStorage lasts only for a tab session, and cookies can have a custom expiry date and are automatically sent with HTTP requests
+ -->
+
 Difference between DOMContentLoaded and load events?
 
+<!--
+DOMContentLoaded fires when the HTML document is completely parsed and the DOM is ready, without waiting for external resources.
+load fires only after the entire page — including all assets — has fully loaded.
+Use DOMContentLoaded for initializing scripts that manipulate the DOM early, and load for tasks that require all resources to be available.
+ -->
+
 What is the Shadow DOM?
+
+<!--
+The Shadow DOM is a browser feature that lets you create encapsulated DOM trees with their own scoped styles and markup. It prevents style and behavior conflicts across components, enabling better modularity and reusability in web applications.
+ -->
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
 🚀 Expert-Level JavaScript
 
@@ -200,15 +294,13 @@ What are HTTP-only cookies and Secure flags?
 
 What will be the output?
 
-console.log([] + []); 
-console.log([] + {}); 
+console.log([] + []);
+console.log([] + {});
 console.log({} + []);
-
 
 What is the output?
 
 console.log(0.1 + 0.2 === 0.3);
-
 
 What will this print?
 
@@ -217,14 +309,12 @@ let b = a;
 b.x = 2;
 console.log(a.x);
 
-
 What happens here?
 
 const a = [1, 2, 3];
 const b = a;
 b.push(4);
 console.log(a);
-
 
 How would you deep clone a nested object safely (no shallow copy)?
 
@@ -254,6 +344,5 @@ console.log('A');
 setTimeout(() => console.log('B'));
 Promise.resolve().then(() => console.log('C'));
 console.log('D');
-
 
 How would you polyfill Array.prototype.map?
