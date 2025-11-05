@@ -7,7 +7,6 @@ export default function Achievements() {
       date: "January 2025",
       link: "https://certs.masaischool.com/certificate/xto10jan_fs40_405636",
     },
-    
   ];
 
   return (
