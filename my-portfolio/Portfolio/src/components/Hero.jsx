@@ -67,15 +67,7 @@ export default function Hero() {
             <i className="ri-download-line"></i>
           </a>
 
-          {/* View Portfolio */}
-          {/* <a
-            href="https://ankitkumar1141-portfolio.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 rounded-full text-lg font-medium transition-colors cursor-pointer whitespace-nowrap"
-          >
-            View Portfolio
-          </a> */}
+          
         </div>
 
         <div className="flex items-center justify-center space-x-6">

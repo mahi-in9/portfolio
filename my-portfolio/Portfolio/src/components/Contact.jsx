@@ -30,7 +30,7 @@ export default function Contact() {
 
     try {
       const scriptURL =
-        "https://script.google.com/macros/s/AKfycbxMsp13pDnKrWa6ZPzZ16IL2iz1ybKEyD_6luiMlaIFgS5wkuqIbb-vT07Dqc6KssSd/exec";
+        "https://script.google.com/macros/s/AKfycbxZz2vQovQsJTznAHIws8A5SQAiPIo05Nv0k4RtQ9iygbP2PuTXJ3WvGr_2lvaOumsR/exec";
       const googleFormData = new FormData();
       googleFormData.append("Name", formData.name);
       googleFormData.append("Email", formData.email);
