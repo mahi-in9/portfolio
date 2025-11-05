@@ -46,7 +46,7 @@ const PortfolioChatBot = () => {
       lowerMessage.includes("portfolio") ||
       lowerMessage.includes("work")
     ) {
-      return "Mahendra has built several impressive projects:\n• TodoList Clone - Task management app\n• TrafficSub - Traffic management system\n• LinkedIn Clone - Social networking platform\n• Various responsive web applications\n\nEach project showcases his expertise in modern development practices!";
+      return "Mahendra has built several impressive projects:\n• Health Leaf - self care app\n• Destination recommendation - Finding place system\n• Medium Clone - Social networking platform\n• Various responsive web applications\n\nEach project showcases his expertise in modern development practices!";
     }
 
     if (
