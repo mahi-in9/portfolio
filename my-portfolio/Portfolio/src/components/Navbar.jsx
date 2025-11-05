@@ -194,7 +194,7 @@ export default function Navbar() {
 
               {/* Hire Me Button */}
               <a
-                href="https://drive.google.com/uc?export=download&id=1hL47ppIqoRxjsb8JzUFwmLmRYi4k1rKm"
+                href="https://drive.google.com/file/d/1DDAc-ndVtSDq-t8TBzGxfCOxJsLqdLIr/view"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-3 w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full text-sm font-medium transition-colors flex items-center justify-center space-x-2"
