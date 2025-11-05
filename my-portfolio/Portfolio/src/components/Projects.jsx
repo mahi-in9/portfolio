@@ -180,7 +180,7 @@ export default function Projects() {
             Want to see more of my work? Check out my GitHub profile.
           </p>
           <a
-            href="https://github.com/Ankit1141192"
+            href="https://github.com/mahi-in9"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-gray-800 dark:bg-white text-white dark:text-gray-800 hover:bg-gray-900 dark:hover:bg-gray-100 px-8 py-3 rounded-full text-lg font-medium transition-colors cursor-pointer inline-flex items-center space-x-2 whitespace-nowrap"
