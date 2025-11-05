@@ -6,7 +6,8 @@ export default function About() {
     { number: "1+", label: "Years of Learning" },
     { number: "3+", label: "Hackathons Participated" },
     { number: "5+", label: "Technologies Used" },
-  ];22
+  ];
+  22;
 
   return (
     <section id="about" className="py-20 px-4">
@@ -30,7 +31,7 @@ export default function About() {
               I'm a passionate and curious software developer specializing in
               the MERN stack, with hands-on experience in building real-world
               web and mobile applications. Though I'm a fresher, I’ve worked on
-              10+ projects that showcase my ability to design, develop, and
+              multiple projects that showcase my ability to design, develop, and
               deploy scalable and responsive applications.
             </p>
             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
