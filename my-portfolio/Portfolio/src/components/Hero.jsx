@@ -57,7 +57,7 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4 mb-12">
           {/* Download CV */}
           <a
-            href="https://drive.google.com/file/d/1DDAc-ndVtSDq-t8TBzGxfCOxJsLqdLIr/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1CudSSmflQYUT6MSwZuC4dBWNVKMahzPo/view?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
             download
