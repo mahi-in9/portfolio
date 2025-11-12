@@ -57,17 +57,28 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4 mb-12">
           {/* Download CV */}
           <a
-            href="https://drive.google.com/file/d/1CudSSmflQYUT6MSwZuC4dBWNVKMahzPo/view?usp=drive_link"
-            target="_blank"
-            rel="noopener noreferrer"
-            download
-            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full text-lg font-medium transition-colors cursor-pointer flex items-center space-x-2 whitespace-nowrap"
+            href="https://drive.google.com/uc?export=download&id=1CudSSmflQYUT6MSwZuC4dBWNVKMahzPo"
+            onClick={(e) => {
+              e.preventDefault();
+              window.open(
+                "https://drive.google.com/file/d/1CudSSmflQYUT6MSwZuC4dBWNVKMahzPo/view?usp=drive_link",
+                "_blank"
+              );
+              const link = document.createElement("a");
+              link.href =
+                "https://drive.google.com/uc?export=download&id=1CudSSmflQYUT6MSwZuC4dBWNVKMahzPo";
+              link.setAttribute("download", "Mahendra_Kumar_Sahu_Resume.pdf");
+              document.body.appendChild(link);
+              link.click();
+              link.remove();
+            }}
+            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3
+          rounded-full text-lg font-medium transition-colors cursor-pointer flex
+          items-center space-x-2 whitespace-nowrap"
           >
-            <span>Download CV</span>
-            <i className="ri-download-line"></i>
+            <span>Resume</span>
+            <i className="ri-download-line text-sm"></i>
           </a>
-
-          
         </div>
 
         <div className="flex items-center justify-center space-x-6">

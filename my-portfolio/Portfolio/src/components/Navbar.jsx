@@ -1,135 +1,94 @@
 import { useState, useEffect } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
 import { useTheme } from "../context/ThemeContext";
 
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState("home");
   const [menuOpen, setMenuOpen] = useState(false);
-  const { darkMode, toggleDarkMode } = useTheme();
-  const navigate = useNavigate();
-  const location = useLocation();
+  const { darkMode } = useTheme();
 
   const navItems = [
-    { id: "home", label: "Home", path: "/" },
-    { id: "about", label: "About", path: "/about" },
-    { id: "skills", label: "Skills", path: "/skills" },
-    { id: "services", label: "Services", path: "/services" },
-    { id: "projects", label: "Projects", path: "/projects" },
-    { id: "contact", label: "Contact", path: "/contact" },
+    { id: "home", label: "Home" },
+    { id: "about", label: "About" },
+    { id: "skills", label: "Skills" },
+    { id: "services", label: "Services" },
+    { id: "projects", label: "Projects" },
+    { id: "contact", label: "Contact" },
   ];
 
-  const handleNavigation = (path, sectionId) => {
-    if (location.pathname === "/" && path === "/") {
-      // We're on homepage, scroll to section
-      scrollToSection(sectionId);
-    } else if (path === "/") {
-      // Navigate to homepage
-      navigate("/");
-      setActiveSection("home");
-    } else {
-      // Navigate to individual page
-      navigate(path);
-      setActiveSection(sectionId);
-    }
-    setMenuOpen(false);
-  };
-
+  // Scroll smoothly to the section
   const scrollToSection = (sectionId) => {
     setActiveSection(sectionId);
     const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+    if (element) element.scrollIntoView({ behavior: "smooth" });
+    setMenuOpen(false);
   };
 
-  // Track scroll position on homepage
+  // Scroll Spy — detect visible section
   useEffect(() => {
-    if (location.pathname !== "/") return;
-
     const handleScroll = () => {
-      const sections = [
-        "home",
-        "about",
-        "skills",
-        "services",
-        "projects",
-        "contact",
-      ];
-      const scrollPosition = window.scrollY + 100;
+      const scrollY = window.scrollY + 150;
+      let current = "home";
 
-      for (const section of sections) {
-        const element = document.getElementById(section);
-        if (element) {
-          const { offsetTop, offsetHeight } = element;
-          if (
-            scrollPosition >= offsetTop &&
-            scrollPosition < offsetTop + offsetHeight
-          ) {
-            setActiveSection(section);
-            break;
+      navItems.forEach((item) => {
+        const section = document.getElementById(item.id);
+        if (section) {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.offsetHeight;
+          if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+            current = item.id;
           }
         }
-      }
+      });
+
+      setActiveSection(current);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [location.pathname]);
+  }, []);
 
-  // Set active section based on current route
-  useEffect(() => {
-    const currentPath = location.pathname;
-    const currentItem = navItems.find((item) => item.path === currentPath);
-    if (currentItem) {
-      setActiveSection(currentItem.id);
-    }
-  }, [location.pathname]);
-
-  const isActive = (sectionId) => {
-    return activeSection === sectionId;
-  };
+  const isActive = (id) => activeSection === id;
 
   return (
     <>
-      {/* Navbar */}
-      <nav className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 w-[90%] max-w-6xl bg-white/90 dark:bg-gray-800/80 backdrop-blur-md rounded-full px-6 py-3 shadow-lg border border-gray-200/50 dark:border-gray-600/50">
+      {/* Main Navbar */}
+      <nav className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 w-[90%] max-w-6xl bg-white/90 dark:bg-gray-800/80 backdrop-blur-md rounded-full px-6 py-3 shadow-lg border border-gray-200/50 dark:border-gray-600/50 transition-all duration-300">
         <div className="flex items-center justify-between">
-          {/* Left: Logo */}
+          {/* Logo */}
           <button
-            onClick={() => handleNavigation("/", "home")}
-            className="text-2xl font-bold text-gray-800 font-[cursive] hover:scale-105 transition-transform"
+            onClick={() => scrollToSection("home")}
+            className="text-2xl font-bold text-gray-800 dark:text-white font-[cursive] hover:scale-105 transition-transform"
           >
             <span className="text-purple-500">Mahendra Kumar Sahu</span>
           </button>
 
-          {/* Center: Desktop Nav */}
-          <div className="hidden sm:flex flex-1 items-center justify-center space-x-6">
+          {/* Desktop Navigation */}
+          <div className="hidden sm:flex flex-1 items-center justify-center space-x-8">
             {navItems.map((item) => (
               <button
                 key={item.id}
-                onClick={() => handleNavigation(item.path, item.id)}
-                className={`text-sm font-medium transition-colors duration-200 hover:text-blue-600 dark:hover:text-blue-400 ${
+                onClick={() => scrollToSection(item.id)}
+                className={`relative text-sm font-medium transition-colors duration-300 ${
                   isActive(item.id)
                     ? "text-blue-600 dark:text-blue-400"
-                    : "text-gray-600 dark:text-gray-300"
+                    : "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
                 }`}
               >
                 {item.label}
+                {/* Animated underline */}
+                <span
+                  className={`absolute left-0 -bottom-1 h-[2px] bg-blue-600 dark:bg-blue-400 rounded-full transition-all duration-300 ${
+                    isActive(item.id)
+                      ? "w-full opacity-100"
+                      : "w-0 opacity-0 group-hover:w-full group-hover:opacity-100"
+                  }`}
+                ></span>
               </button>
             ))}
           </div>
 
-          {/* Right: Desktop Toggle + Button */}
-          <div className="hidden sm:flex items-center space-x-3">
-            {/* <button
-              onClick={toggleDarkMode}
-              className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
-            >
-              <i
-                className={`ri-${darkMode ? 'sun' : 'moon'}-line text-lg text-gray-600 dark:text-gray-300`}
-              ></i>
-            </button> */}
-
+          {/* Resume Button */}
+          <div className="hidden sm:flex items-center">
             <a
               href="https://drive.google.com/file/d/1CudSSmflQYUT6MSwZuC4dBWNVKMahzPo/view?usp=drive_link"
               target="_blank"
@@ -141,11 +100,11 @@ export default function Navbar() {
             </a>
           </div>
 
-          {/* Right: Mobile Hamburger */}
+          {/* Mobile Menu Icon */}
           <div className="sm:hidden">
             <button
               onClick={() => setMenuOpen(true)}
-              className="text-2xl text-gray-700 dark:text-white"
+              className="text-2xl text-gray-800 dark:text-gray-100"
             >
               <i className="ri-menu-line"></i>
             </button>
@@ -153,54 +112,52 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Mobile Slide-In Menu */}
+      {/* Mobile Drawer Menu */}
       {menuOpen && (
-        <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex justify-end ">
-          <div className="w-[70%] max-w-xs h-full bg-white dark:bg-gray-900 shadow-lg p-6 transition-all duration-300">
-            <div className="flex justify-between items-center mb-6">
-              <button
-                onClick={() => handleNavigation("/", "home")}
-                className="text-xl font-bold text-purple-500"
-              >
-                Mahendra
-              </button>
-              <button
-                onClick={() => setMenuOpen(false)}
-                className="text-2xl text-gray-700 dark:text-white"
-              >
-                <i className="ri-close-line"></i>
-              </button>
+        <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex justify-end">
+          <div className="w-[70%] max-w-xs h-full bg-white dark:bg-gray-900 shadow-lg p-6 flex flex-col justify-between">
+            <div>
+              <div className="flex justify-between items-center mb-6">
+                <button
+                  onClick={() => scrollToSection("home")}
+                  className="text-xl font-bold text-purple-500"
+                >
+                  Mahendra
+                </button>
+                <button
+                  onClick={() => setMenuOpen(false)}
+                  className="text-2xl text-gray-700 dark:text-gray-100"
+                >
+                  <i className="ri-close-line"></i>
+                </button>
+              </div>
+
+              <div className="space-y-4">
+                {navItems.map((item) => (
+                  <button
+                    key={item.id}
+                    onClick={() => scrollToSection(item.id)}
+                    className={`block w-full text-left px-2 py-2 rounded transition ${
+                      isActive(item.id)
+                        ? "text-blue-600 dark:text-blue-400"
+                        : "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                    }`}
+                  >
+                    {item.label}
+                  </button>
+                ))}
+              </div>
             </div>
 
-            <div className="space-y-4">
-              {navItems.map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => handleNavigation(item.path, item.id)}
-                  className={`block w-full text-left px-2 py-2 rounded hover:bg-blue-100 dark:hover:bg-gray-700 transition ${
-                    isActive(item.id)
-                      ? "text-blue-600 dark:text-blue-400"
-                      : "text-gray-600 dark:text-gray-300"
-                  }`}
-                >
-                  {item.label}
-                </button>
-              ))}
-
-              {/* Divider */}
-              <hr className="my-4 border-gray-300 dark:border-gray-600" />
-
-              {/* Dark Mode Toggle */}
-
-              {/* Hire Me Button */}
+            {/* Divider + Resume Button */}
+            <div className="pt-6 border-t border-gray-300 dark:border-gray-700">
               <a
                 href="https://drive.google.com/file/d/1CudSSmflQYUT6MSwZuC4dBWNVKMahzPo/view?usp=drive_link"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-3 w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full text-sm font-medium transition-colors flex items-center justify-center space-x-2"
+                className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-4 py-2 rounded-full text-sm font-medium transition-colors"
               >
-                <span>Hire Me</span>
-                <i className="ri-download-line text-sm"></i>
+                Hire Me
               </a>
             </div>
           </div>
