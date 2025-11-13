@@ -152,9 +152,24 @@ export default function Navbar() {
             {/* Divider + Resume Button */}
             <div className="pt-6 border-t border-gray-300 dark:border-gray-700">
               <a
-                href="https://drive.google.com/file/d/1CudSSmflQYUT6MSwZuC4dBWNVKMahzPo/view?usp=drive_link"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="https://drive.google.com/uc?export=download&id=1CudSSmflQYUT6MSwZuC4dBWNVKMahzPo"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open(
+                    "https://drive.google.com/file/d/1CudSSmflQYUT6MSwZuC4dBWNVKMahzPo/view?usp=drive_link",
+                    "_blank"
+                  );
+                  const link = document.createElement("a");
+                  link.href =
+                    "https://drive.google.com/uc?export=download&id=1CudSSmflQYUT6MSwZuC4dBWNVKMahzPo";
+                  link.setAttribute(
+                    "download",
+                    "Mahendra_Kumar_Sahu_Resume.pdf"
+                  );
+                  document.body.appendChild(link);
+                  link.click();
+                  link.remove();
+                }}
                 className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-4 py-2 rounded-full text-sm font-medium transition-colors"
               >
                 Hire Me
