@@ -103,6 +103,7 @@ export default function Projects() {
                   className="w-full h-48 object-cover object-top group-hover:scale-110 transition-transform duration-300"
                 />
 
+                {/* Overlay Buttons */}
                 <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
                   {project.liveUrl && (
                     <a
@@ -136,8 +137,9 @@ export default function Projects() {
 
               {/* Content */}
               <div className="p-6 flex flex-col flex-grow">
-                <div className="flex items-center justify-between mb-3">
-                  <h3 className="text-xl font-bold text-gray-800 dark:text-white">
+                {/* FIX: Equal title height */}
+                <div className="min-h-[56px] flex items-start justify-between mb-3">
+                  <h3 className="text-xl font-bold text-gray-800 dark:text-white leading-tight">
                     {project.title}
                   </h3>
                   <span className="text-xs font-medium text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-900/30 px-2 py-1 rounded-full capitalize">
@@ -160,7 +162,7 @@ export default function Projects() {
                   ))}
                 </div>
 
-                {/* Buttons pinned to bottom */}
+                {/* Buttons pinned bottom */}
                 <div className="mt-auto flex space-x-3">
                   {project.liveUrl && (
                     <a
@@ -186,7 +188,7 @@ export default function Projects() {
           ))}
         </div>
 
-        {/* GitHub Profile Link */}
+        {/* GitHub */}
         <div className="text-center mt-12">
           <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
             Want to explore more of my work?
