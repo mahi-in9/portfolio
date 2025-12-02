@@ -57,16 +57,16 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4 mb-12">
           {/* Download CV */}
           <a
-            href="https://drive.google.com/uc?export=download&id=1CudSSmflQYUT6MSwZuC4dBWNVKMahzPo"
+            href="https://drive.google.com/uc?export=download&id=1th8toYA2xhOVFLssHTc79yGLPzIr953Z"
             onClick={(e) => {
               e.preventDefault();
               window.open(
-                "https://drive.google.com/file/d/1CudSSmflQYUT6MSwZuC4dBWNVKMahzPo/view?usp=drive_link",
+                "https://drive.google.com/file/d/1th8toYA2xhOVFLssHTc79yGLPzIr953Z/view?usp=drive_link",
                 "_blank"
               );
               const link = document.createElement("a");
               link.href =
-                "https://drive.google.com/uc?export=download&id=1CudSSmflQYUT6MSwZuC4dBWNVKMahzPo";
+                "https://drive.google.com/uc?export=download&id=1th8toYA2xhOVFLssHTc79yGLPzIr953Z";
               link.setAttribute("download", "Mahendra_Kumar_Sahu_Resume.pdf");
               document.body.appendChild(link);
               link.click();

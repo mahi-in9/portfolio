@@ -90,7 +90,7 @@ export default function Navbar() {
           {/* Resume Button */}
           <div className="hidden sm:flex items-center">
             <a
-              href="https://drive.google.com/file/d/1CudSSmflQYUT6MSwZuC4dBWNVKMahzPo/view?usp=drive_link"
+              href="https://drive.google.com/file/d/1th8toYA2xhOVFLssHTc79yGLPzIr953Z/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full text-sm font-medium transition-colors flex items-center space-x-2 whitespace-nowrap"
@@ -152,16 +152,16 @@ export default function Navbar() {
             {/* Divider + Resume Button */}
             <div className="pt-6 border-t border-gray-300 dark:border-gray-700">
               <a
-                href="https://drive.google.com/uc?export=download&id=1CudSSmflQYUT6MSwZuC4dBWNVKMahzPo"
+                href="https://drive.google.com/uc?export=download&id=1th8toYA2xhOVFLssHTc79yGLPzIr953Z"
                 onClick={(e) => {
                   e.preventDefault();
                   window.open(
-                    "https://drive.google.com/file/d/1CudSSmflQYUT6MSwZuC4dBWNVKMahzPo/view?usp=drive_link",
+                    "https://drive.google.com/file/d/1th8toYA2xhOVFLssHTc79yGLPzIr953Z/view?usp=drive_link",
                     "_blank"
                   );
                   const link = document.createElement("a");
                   link.href =
-                    "https://drive.google.com/uc?export=download&id=1CudSSmflQYUT6MSwZuC4dBWNVKMahzPo";
+                    "https://drive.google.com/uc?export=download&id=1th8toYA2xhOVFLssHTc79yGLPzIr953Z";
                   link.setAttribute(
                     "download",
                     "Mahendra_Kumar_Sahu_Resume.pdf"
